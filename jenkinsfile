@@ -7,7 +7,7 @@ pipeline {
             steps {
             sh 'cd src'
             sh 'export FLASK_APP=server.py'
-            sh 'python -m flask run'
+            sh 'flask run'
             }
         }
     }
