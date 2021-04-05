@@ -5,9 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                node{
-                    label'SLAVE 01'
-                }
+                print("kuch bhi")
             }
             steps {
                 //This sh step runs the Python command to compile your application and
