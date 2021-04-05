@@ -5,8 +5,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            export FLASK_APP="./src/server.py"
-            flask run
+            sh 'export FLASK_APP="./src/server.py"'
+            sh 'flask run'
             }
         }
     }
