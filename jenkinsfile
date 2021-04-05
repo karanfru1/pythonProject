@@ -6,8 +6,8 @@ pipeline {
         stage('Build') {
             steps {
             sh 'cd src'
-            sh 'export FLASK_APP=server.py'
-            sh 'flask run'
+            sh 'env:FLASK_APP=server.py'
+            sh 'python -m flask run'
             }
         }
     }
