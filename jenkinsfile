@@ -4,8 +4,8 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-            agent {
-                echo " kuch bhi"
+            steps {
+                echo 'Building...'
             }
             steps {
                 //This sh step runs the Python command to compile your application and
