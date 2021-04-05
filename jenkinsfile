@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            sh 'export FLASK_APP=/var/lib/jenkins/workspace/jenkinsgitdemo/src/server.py'
+            sh 'cd src'
+            sh 'export FLASK_APP=server.py'
             sh 'flask run'
             }
         }
