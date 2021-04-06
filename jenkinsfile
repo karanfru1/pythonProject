@@ -9,7 +9,7 @@ pipeline {
     stage('run') {
       steps {
         dir('src'){
-        sh 'sh 'export FLASK_APP="server.py"'
+        sh 'export FLASK_APP="server.py"'
         sh 'flask run'
 
       }   
