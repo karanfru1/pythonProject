@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { docker { image 'python:3.7.2' } }
   stages {
     stage('build') {
       steps {
@@ -11,9 +11,8 @@ pipeline {
         dir('src'){
         sh 'export FLASK_APP="server.py"'
         sh 'flask run'
-
       }   
-      }
     }
   }
+}
 }
