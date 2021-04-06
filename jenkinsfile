@@ -9,7 +9,9 @@ pipeline {
             dir('src'){
             sh 'pwd'
             sh 'ls'
-            sh 'python server.py'
+            sh 'export FLASK_APP="server.py"'
+            sh 'flask run'
+
             }
             }
         }
