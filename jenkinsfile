@@ -1,9 +1,11 @@
 pipeline {
-  agent { docker { image 'python:3.6.9' } }
+  agent { docker { image 'python:3.7.2' } }
   stages {
     stage('build') {
       steps {
-        sh 'virtualenv venv && . venv/bin/activate && pip install -r requirement.txt'
+        sh 'virtualenv venv'
+        sh '. venv/bin/activate'
+        sh 'pip install -r requirement.txt'
       }
     }
     stage('run') {
