@@ -4,7 +4,7 @@ pipeline {
     stage('build'){
     steps{
       
-      sh 'pip3 install flask --user'
+      sh 'pip install flask --user'
       sh 'python -m pip freeze'
       sh 'which python'
       }
